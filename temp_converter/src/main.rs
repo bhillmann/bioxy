@@ -3,20 +3,27 @@ use std::io;
 fn main() {
     println!("Convert fahrenheit to celsius!");
 
-    println!("Please input your temperature to convert.");
-
     loop {
-        let mut guess = String::new();
 
-        io::stdin().read_line(&mut guess)
+        let mut user_input = String::new();
+
+        println!("Please input your temperature to convert.");
+
+        io::stdin().read_line(&mut user_input)
             .expect("Failed to read line.");
 
-        let guess:f32 = guess.trim().parse()
-            .expect("Failed to read number.");
+        if user_input.trim() == "quit" {
+            break;
+        }
 
-        let converted:f32 = fahrenheit_to_celsius(guess);
+        let temp:f32 = match user_input.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
-        println!("You input {} Fahrenheit which is {} Celsius", guess, converted);
+        let converted:f32 = fahrenheit_to_celsius(temp);
+
+        println!("You input {} Fahrenheit which is {} Celsius", temp, converted);
         }
     }
 
