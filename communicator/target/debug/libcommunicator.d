@@ -1,0 +1,1 @@
+/mnt/c/Users/bhillmann/code/bioxy/communicator/target/debug/libcommunicator.rlib: /mnt/c/Users/bhillmann/code/bioxy/communicator/src/client.rs /mnt/c/Users/bhillmann/code/bioxy/communicator/src/network/server.rs /mnt/c/Users/bhillmann/code/bioxy/communicator/src/network/mod.rs /mnt/c/Users/bhillmann/code/bioxy/communicator/src/lib.rs
